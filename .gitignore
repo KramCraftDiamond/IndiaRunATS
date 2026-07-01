@@ -1,0 +1,5 @@
+data/raw/candidates.jsonl
+data/raw/.DS_Store
+__pycache__/
+*.py[cod]
+.pytest_cache/
