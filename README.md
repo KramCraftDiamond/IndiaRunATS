@@ -35,7 +35,7 @@ Founding-year caveat: Phase 4's founding-year honeypot check uses a buffer and f
 - Krutrim, Sarvam AI, and Glance have inherent founding-date ambiguity because incorporation, public launch, product launch, and announcement dates can differ; this is why the founding-year honeypot check uses a 1-year buffer rather than an exact-year cutoff.
 - The 60-day notice-period threshold was chosen over alternatives because `validation/results/threshold_results.json` showed top-100 overlap dropping to 85.0% at 45 days, while 75 days held at 100% overlap; 60 days is closest to typical Indian notice-period norms within the range that does not destabilize the ranking.
 
-Honeypot near-miss audit: `validation/honeypot_near_miss_audit.py` checks whether single-flag near-misses or literal suspicious expert-skill profiles reach the top ranks. The latest run found 6 candidates with `honeypot_flag_count == 1` in the top 100, 1 in the top 10, 0 full-pool candidates with 8+ expert skills at near-zero duration, and 0 such profiles in the top 100.
+Honeypot near-miss audit: `validation/honeypot_near_miss_audit.py` checks whether single-flag near-misses or literal suspicious expert-skill profiles reach the top ranks. The latest run found 4 candidates with `honeypot_flag_count == 1` in the top 100, 1 in the top 10, 0 full-pool candidates with 8+ expert skills at near-zero duration, and 0 such profiles in the top 100.
 
 ## Scoring
 
@@ -56,8 +56,9 @@ Base relevance:
 The behavioral modifier is multiplicative:
 
 ```text
-final_score = base_relevance * behavioral_modifier
+final_score = (base_relevance * behavioral_modifier)/1.30
 ```
+Score is normalized to a 0-1 range by dividing by the behavioral modifier's defined maximum (1.30).
 
 Honeypot exclusion runs before final ranking. A candidate is excluded only when at least two independent flags trigger.
 
@@ -68,7 +69,7 @@ Full ranking run:
 ```text
 records_scanned: 100000
 records_ranked_after_honeypot: 99989
-honeypot_excluded: 11
+honeypot_excluded: 16
 elapsed_seconds: 29.333
 ```
 
