@@ -1,0 +1,98 @@
+{
+  "records_scanned": 100000,
+  "excluded_count": 16,
+  "severe_founding_date_excluded_count": 5,
+  "excluded_percent": 0.016,
+  "flag_count_histogram": {
+    "0": 94667,
+    "1": 5322,
+    "2": 11
+  },
+  "excluded_samples": [
+    {
+      "candidate_id": "CAND_0004112",
+      "name": "Priya Kumar",
+      "current_title": "Senior Software Engineer (ML)",
+      "current_company": "Zoho",
+      "exclusion_reason": "severe_founding_date_violation",
+      "severe_violation_details": {
+        "company": "Krutrim",
+        "title": "Senior Software Engineer (ML)",
+        "start_date": "2019-12-30",
+        "founding_year": 2023,
+        "gap_years": 4,
+        "threshold_years": 3
+      },
+      "flag_count": 1,
+      "flags": [
+        "worked_before_company_founding"
+      ]
+    },
+    {
+      "candidate_id": "CAND_0004678",
+      "name": "Manish Gupta",
+      "current_title": "QA Engineer",
+      "current_company": "Pied Piper",
+      "exclusion_reason": "honeypot_threshold",
+      "severe_violation_details": null,
+      "flag_count": 2,
+      "flags": [
+        "worked_before_company_founding",
+        "self_rating_assessment_contradiction"
+      ]
+    },
+    {
+      "candidate_id": "CAND_0011687",
+      "name": "Shreya Tiwari",
+      "current_title": "Senior NLP Engineer",
+      "current_company": "Niramai",
+      "exclusion_reason": "severe_founding_date_violation",
+      "severe_violation_details": {
+        "company": "Krutrim",
+        "title": "Senior Machine Learning Engineer",
+        "start_date": "2018-11-05",
+        "founding_year": 2023,
+        "gap_years": 5,
+        "threshold_years": 3
+      },
+      "flag_count": 1,
+      "flags": [
+        "worked_before_company_founding"
+      ]
+    },
+    {
+      "candidate_id": "CAND_0017960",
+      "name": "Pari Shah",
+      "current_title": "Recommendation Systems Engineer",
+      "current_company": "Nykaa",
+      "exclusion_reason": "severe_founding_date_violation",
+      "severe_violation_details": {
+        "company": "Sarvam AI",
+        "title": "Search Engineer",
+        "start_date": "2018-09-22",
+        "founding_year": 2023,
+        "gap_years": 5,
+        "threshold_years": 3
+      },
+      "flag_count": 1,
+      "flags": [
+        "worked_before_company_founding"
+      ]
+    },
+    {
+      "candidate_id": "CAND_0024122",
+      "name": "Suresh Mishra",
+      "current_title": ".NET Developer",
+      "current_company": "Tech Mahindra",
+      "exclusion_reason": "honeypot_threshold",
+      "severe_violation_details": null,
+      "flag_count": 2,
+      "flags": [
+        "worked_before_company_founding",
+        "self_rating_assessment_contradiction"
+      ]
+    }
+  ],
+  "founding_year_lookup_entries": 43,
+  "founding_year_buffer_years": 1
+}

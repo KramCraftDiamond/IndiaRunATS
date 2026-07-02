@@ -1,0 +1,64 @@
+# Redrob Hackathon - Submission Metadata
+
+# Team identity
+team_name: "TODO_HUMAN"  # Requires manual input.
+
+primary_contact:
+  name: "TODO_HUMAN"   # Requires manual input.
+  email: "TODO_HUMAN"  # Requires manual input.
+  phone: "TODO_HUMAN"  # Requires manual input.
+
+team_members:
+  - name: "TODO_HUMAN"   # Requires manual input.
+    email: "TODO_HUMAN"  # Requires manual input.
+    role: "TODO_HUMAN"   # Requires manual input.
+
+# Code and reproducibility
+github_repo: "https://github.com/rishicodesforfun/India-runs-ats"
+sandbox_link: "TODO_HUMAN"  # Requires manual input after publishing the sandbox notebook.
+reproduce_command: "py -3 phase_b/rank.py --out submission/official_submission.csv"
+
+# Compute environment
+compute:
+  platform: "Acer TravelMate P214-55"
+  cpu_cores: 12
+  ram_gb: 32
+  python_version: "3.13.13"
+  os: "Microsoft Windows 11 Pro 10.0.26200"
+  uses_gpu_for_inference: false
+  has_network_during_ranking: false
+  pre_computation_required: true
+  pre_computation_time_minutes: "TODO_HUMAN"  # Requires manual input; no Phase A timing record found in repo.
+
+# AI tools declaration
+ai_tools_used:
+  - "Claude"
+  - "Codex/Codex CLI"
+
+ai_usage_summary: |
+  Used Claude for audit review and Codex/Codex CLI for implementation support,
+  validation, and repository hardening. No candidate data is sent to an LLM
+  during ranking; the timed ranker is deterministic, CPU-only, and reads only
+  local frozen lookup files plus the local candidate JSONL.
+
+# Approach summary
+methodology_summary: |
+  Deterministic rule-based ranker for Redrob's Senior AI Engineer, Founding
+  Team role. Base relevance is a weighted sum of career fit, skill fit, and
+  education/location fit. Career fit uses frozen manual company/title tiers,
+  experience fit, relevant-role tenure, and one shared tenure-pattern module.
+  Skill fit rewards production AI, retrieval, embeddings, ranking, and vector
+  infrastructure evidence while penalizing weak self-rating/assessment matches.
+  Education/location fit favors stronger education tiers and India/Pune/Noida
+  availability. Behavioral signals such as notice period, recruiter response,
+  activity, GitHub activity, and verified contacts are applied as a
+  multiplicative modifier. Honeypot exclusions run before ranking and require
+  at least two independent flags.
+
+# Declarations
+declarations:
+  read_submission_spec: true
+  code_is_original_work: true
+  no_collusion: true
+  honeypot_check_done: true
+  reproduction_tested: true
